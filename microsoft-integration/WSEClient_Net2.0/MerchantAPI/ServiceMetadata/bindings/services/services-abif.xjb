@@ -1,0 +1,45 @@
+<jxb:bindings
+  version="1.0"
+  xmlns:jxb="http://java.sun.com/xml/ns/jaxb">
+
+	<!-- =========== services on v1.0 =========== -->
+    
+     <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/errorResponse-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.errorResponse"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>       
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/abif/createUserAddBeneficiaryBankAccountAndPayout-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.createUserAddBeneficiaryBankAccountAndPayout"/>
+        </jxb:schemaBindings>
+    </jxb:bindings> 
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/abif/submitBatch-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.submitBatch"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <!-- =========== services on v1.1 =========== -->
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/abif/batchItemErrorResponse-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.batchItemError"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>  
+    
+</jxb:bindings>

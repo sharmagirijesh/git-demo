@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document: getPayerIdentity-2.0.xsd	
+    Version:  2.0
+    Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema xmlns="http://customer.endpoint.earthport.com/api/merchant/v2/services/getPayerIdentity"
+    targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v2/services/getPayerIdentity"
+    xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+    xmlns:epident="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase" 
+    	schemaLocation="../components/identityBaseTypes-2.0.xsd" />
+    	
+    <xsd:annotation>
+        <xsd:documentation>
+            <p>getPayerIdentity request</p>
+
+			<p>
+				Definition of XML document message for the
+				getPayerIdentity request function. This
+				function is used by customers to list all of the details for
+				the specified users Payer Identity data.
+			</p>
+			
+			<p>
+				The message needs to contain the UserID of the account which wants to be
+				retrieved.
+				An optional element showHistory will return all the 
+				versions of the payerIdentity data associated with this user,
+				otherwise the default behavior will be to just return the current
+				Payer identity Data.
+			</p>
+            
+        </xsd:documentation>
+    </xsd:annotation>
+    
+    <xsd:element name="getPayerIdentity" type="getPayerIdentityType" />
+    
+    <xsd:complexType name="getPayerIdentityType">
+		<xsd:sequence>
+			 <xsd:choice>		
+			 	<xsd:sequence>
+					<xsd:element name="userID" type="epcore:UserIDType" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="showHistory" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:element name="payerIdentityID" type="epident:PayerIdentityIDType" />
+			 </xsd:choice> 					
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />
+	</xsd:complexType>
+	
+	<xsd:annotation>
+		<xsd:documentation>
+
+			<p>getPayerIdentity response</p>
+
+			<p>
+				Definition of XML document message returned by the
+				getPayerIdentity function.
+			</p>
+
+			<p>
+				Following a successful service call, the response
+				contains the PayerIdentity data including
+				address, birth data, identification and additional elements
+				as appropriate depending on if it is a company or an individuals identity
+
+			</p>
+
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:element name="getPayerIdentityResponse" type="getPayerIdentityResponseType" />
+	
+	<xsd:complexType name="getPayerIdentityResponseType">
+    	<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element name="userID" type="epcore:UserIDType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="payerIdentity" type="epident:PayerIdentityResponseType" minOccurs="0" maxOccurs="unbounded" />
+    	</xsd:sequence>	
+  	</xsd:complexType>
+	
+</xsd:schema>

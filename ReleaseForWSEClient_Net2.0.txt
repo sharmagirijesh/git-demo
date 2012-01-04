@@ -1,0 +1,17 @@
+1. Implemented the latest schema included in definitions-uat2-1_22_0
+
+2. Latest Schema for identityBaseTypes has been implemented. It incorporates changes in firstname to givennames and last name to familyNames.
+
+  a. beneficiaryBankAccount has been updated to include IndividualNameType
+
+  b. CreateUser has been updated to include IndividualNameType
+
+  c. CreateOrUpdateUser has been updated to include IndividualNameType
+
+
+3. New CreateOrUpdateUser service has been implemented.
+
+4. Test cases corresponsding to the New CreateOrUpdateUser service has been written.
+
+5. getBeneficiaryBankAccountResponse now returns beneficiaryIdentity as per the new Schema instead of beneficiaryIdentityID.
+

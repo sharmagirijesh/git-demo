@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Document: addBeneficiaryBankAccount-3.0.xsd
+	Version:  3.0
+	Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema
+	xmlns="http://customer.endpoint.earthport.com/api/merchant/v3/services/addBeneficiaryBankAccount"
+	targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v3/services/addBeneficiaryBankAccount"
+	xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+	xmlns:epbb="http://customer.endpoint.earthport.com/api/merchant/v3/components/bankBase"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" >
+
+   	<xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v3/components/bankBase" 
+   		schemaLocation="../components/bankBaseTypes-3.0.xsd" />
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+
+	<xsd:annotation>
+		<xsd:documentation>
+
+			<p>addBeneficiaryBankAccount request</p>
+
+			<p>
+				Definition of XML document message for the
+				addBeneficiaryBankAccount request function. This
+				function is used by customers to register a beneficiary
+				bank account within the system.
+			</p>
+
+			<p>
+				The message should contain a userID, merchantBankID and
+				a beneficiary bank account. 
+				
+				The merchant bank ID is an optional merchant specified ID
+				for the beneficiary bank account.				
+				
+				See the definition of the complex type 
+				'UserID' for details on	how to construct the user ID.			
+				
+				See the definition of the complex type
+				'BeneficiaryBankAccountType' for details on how to
+				construct the beneficiary bank account.
+			</p>
+
+			<p>
+				The beneficiary bank account is validated in exactly the
+				same way as it would have been had
+				validateBeneficiaryBankAccount been called. If the
+				beneficiary bank account is a duplicate of one
+				previously registered against the supplied EpUserID, the call
+				simply returns the beneficiary bank account ID.
+				Otherwise, a new beneficiary bank account is registered
+				and the beneficiary bank account ID returned in the
+				response.
+			</p>
+
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="addBeneficiaryBankAccount"
+		type="AddBeneficiaryBankAccountType" />
+
+	<xsd:complexType name="AddBeneficiaryBankAccountType">
+		<xsd:sequence>
+			<xsd:element name="userID"
+				type="epcore:UserIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="merchantBankID"
+				type="epbb:MerchantBankIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="beneficiaryBankAccount"
+				type="epbb:BeneficiaryBankAccountType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />
+	</xsd:complexType>	
+	
+	<xsd:annotation>
+		<xsd:documentation>
+			<p>addBeneficiaryBankAccount response</p>
+
+			<p>
+				Definition of XML document message returned by the
+				addBeneficiaryBankAccount function.
+			</p>
+
+			<p>
+				The top-level SOAP response will have an ack element
+				response of 'success' if the bank account has been
+				successfully registered in the system. The ID of the
+				newly registered beneficiary bank account is returned in
+				the 'benBankID' field of the 'usersBankID' element.
+			</p>
+
+			<p>
+				If the ack response is 'failed' the top-level SOAP
+				response will contain an error response XML document
+				containing one or more validation failures. Refer to the
+				documentation of the 'ErrorResponse' complexType for
+				details on the structure of this XML fragment.
+			</p>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="addBeneficiaryBankAccountResponse"
+		type="AddBeneficiaryBankAccountResponseType">
+	</xsd:element>
+
+	<xsd:complexType name="AddBeneficiaryBankAccountResponseType">
+		<xsd:sequence>
+			<xsd:element name="usersBankID"
+				type="epbb:UsersBankIDType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="warnings" type="WarningsType" minOccurs="0" maxOccurs="1" />	
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	
+  <xsd:complexType name="WarningsType">
+  	<xsd:annotation>
+  		<xsd:documentation>
+  			This type defines multiple warnings messages which can be returned back to the caller.
+  			These messages are not error messages and do not signify a failure with the service request.
+  			
+  			For instance, if insufficient beneficiary identity information has been supplied then the bank registration will not fail. 
+  			However, in subsequent calls to payoutRequest you will not be able to send payouts to this beneficiary bank account, 
+  			until the identity data has been fully updated.
+  		</xsd:documentation>  		
+  	</xsd:annotation>
+  	<xsd:sequence>
+    	<xsd:element name="warning" minOccurs="0" maxOccurs="unbounded" type="WarningType" />
+     </xsd:sequence>
+  </xsd:complexType>
+  
+
+	<xsd:complexType name="WarningType">
+		<xsd:annotation>
+			<xsd:documentation>
+				The 'key' attribute defines a context for the returned warning. For example this could be the name of a field which is missing.
+				The 'code' attribute defines a warning code number just like the Earthport Validation Exception code numbers
+				The 'value' attribute will contain the actual warning message.
+			</xsd:documentation>
+		</xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="key" type="xsd:string" nillable="false"/>
+            <xsd:element name="code" type="WarningCodeType"/>
+            <xsd:element name="value" type="xsd:string" nillable="false"/>            
+        </xsd:sequence>
+    </xsd:complexType>
+
+	<xsd:simpleType name="WarningCodeType">
+  		<xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="99999"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
