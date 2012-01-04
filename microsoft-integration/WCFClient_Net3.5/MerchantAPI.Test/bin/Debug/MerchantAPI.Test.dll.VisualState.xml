@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1020]E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI.Test\bin\Debug\MerchantAPI.Test.dll</TopNode>
+  <SelectedNode>[0-1000]MerchantAPI.Test.ServiceTests</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1020]E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI.Test\bin\Debug\MerchantAPI.Test.dll" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1021]MerchantAPI" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1022]MerchantAPI.Test" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1000]MerchantAPI.Test.ServiceTests" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1001]MerchantAPI.Test.ServiceTests._00_EchoTest" />
+                    <Node UniqueName="[0-1002]MerchantAPI.Test.ServiceTests._10_CreateUserTest" />
+                    <Node UniqueName="[0-1003]MerchantAPI.Test.ServiceTests._11_CreateUserTest_FailValidation" />
+                    <Node UniqueName="[0-1004]MerchantAPI.Test.ServiceTests._12_CreateUserTest_FailValidationNoIdentity" />
+                    <Node UniqueName="[0-1005]MerchantAPI.Test.ServiceTests._13_CreateOrUpdateUserTest" />
+                    <Node UniqueName="[0-1006]MerchantAPI.Test.ServiceTests._19_GetBeneficiaryBankAccountRequiredData" />
+                    <Node UniqueName="[0-1007]MerchantAPI.Test.ServiceTests._20_ValidateBeneficiaryAccountTest_Failure" />
+                    <Node UniqueName="[0-1008]MerchantAPI.Test.ServiceTests._30_ValidateBeneficiaryAccountTest_Success" />
+                    <Node UniqueName="[0-1009]MerchantAPI.Test.ServiceTests._40_AddBeneficiaryAccountTest" />
+                    <Node UniqueName="[0-1010]MerchantAPI.Test.ServiceTests._50_GetBeneficiaryBankAccountTest" />
+                    <Node UniqueName="[0-1011]MerchantAPI.Test.ServiceTests._55_ListBeneficiaryBankAccountsTest" />
+                    <Node UniqueName="[0-1012]MerchantAPI.Test.ServiceTests._60_GetFXQuoteTest" />
+                    <Node UniqueName="[0-1013]MerchantAPI.Test.ServiceTests._65_GetBalanceTest" />
+                    <Node UniqueName="[0-1014]MerchantAPI.Test.ServiceTests._70_PayoutRequestTest" />
+                    <Node UniqueName="[0-1015]MerchantAPI.Test.ServiceTests._76_GetTransactionDetailTest" />
+                    <Node UniqueName="[0-1016]MerchantAPI.Test.ServiceTests._77_GetStatement" />
+                    <Node UniqueName="[0-1017]MerchantAPI.Test.ServiceTests._78_SearchTransactions" />
+                    <Node UniqueName="[0-1018]MerchantAPI.Test.ServiceTests._80_DeleteBeneficiaryBankAccountTest" />
+                    <Node UniqueName="[0-1019]MerchantAPI.Test.ServiceTests._90_DisableUserTest" />
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>

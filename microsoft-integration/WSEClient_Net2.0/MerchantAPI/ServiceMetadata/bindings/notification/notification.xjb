@@ -1,0 +1,18 @@
+<jxb:bindings
+  version="1.0"
+  xmlns:jxb="http://java.sun.com/xml/ns/jaxb">
+
+	<!-- =========== notification on v1.0 =========== -->
+
+	<!-- =========== notification on v2.0 =========== -->
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/notification/notification-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.notification"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+     
+</jxb:bindings>

@@ -1,0 +1,251 @@
+<jxb:bindings
+  version="1.0"
+  xmlns:jxb="http://java.sun.com/xml/ns/jaxb">
+
+	<!-- =========== services on v1.0 =========== -->
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/validatePayerIdentity-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.validatePayerIdentity"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/echo-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.echo"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+     <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/errorResponse-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.errorResponse"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>       
+                
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/abif/submitBatch-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.submitBatch"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/abif/createUserAddBeneficiaryBankAccountAndPayout-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.createUserAddBeneficiaryBankAccountAndPayout"/>
+        </jxb:schemaBindings>
+    </jxb:bindings> 
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/abif/batchItemErrorResponse-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.batchItemError"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>     
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/createOrUpdateUser-1.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v1.createOrUpdateUser"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <!-- =========== services on v1.1 =========== -->
+        
+    <!-- =========== services on v1.2 =========== -->
+            
+	<!-- =========== services on v2.0 =========== -->
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/updatePayerIdentity-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.updatePayerIdentity"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getPayerIdentity-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.getPayerIdentity"/>
+        </jxb:schemaBindings>
+    </jxb:bindings> 
+    
+	<jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/addDepositReference-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.addDepositReference"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+            
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/disableUser-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.disableUser"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getBalance-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.getBalance"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+                
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getIndicativeFXQuote-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.getIndicativeFXQuote"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>    
+                        
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/validateCredit-2.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v2.validateCredit"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <!-- =========== services on v3.0 =========== -->
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/searchTransactions-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.searchTransactions"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+        
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getTransactionDetail-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.getTransactionDetail"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getStatement-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.getStatement"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings 
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/validateBeneficiaryBankAccount-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.validateBeneficiaryBankAccount"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>     
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getFXQuote-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.getFXQuote"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getBeneficiaryBankAccountRequiredData-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.getBeneficiaryBankAccountRequiredData"/>
+        </jxb:schemaBindings>
+    </jxb:bindings> 
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/getBeneficiaryBankAccount-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.getBeneficiaryBankAccount"/>
+        </jxb:schemaBindings>
+    </jxb:bindings> 
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/deleteBeneficiaryBankAccount-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.deleteBeneficiaryBankAccount"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+	<jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/addBeneficiaryBankAccount-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.addBeneficiaryBankAccount"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/createUser-3.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v3.createUser"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+            
+    <!-- =========== services on v4.0 =========== -->
+        
+	<jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/listBeneficiaryBankAccounts-4.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v4.listBeneficiaryBankAccounts"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+      schemaLocation="../../schemas/services/payoutRequest-4.0.xsd" 
+      node="/xs:schema">
+        <jxb:schemaBindings>
+          <jxb:package name="com.earthport.bind.v4.payoutRequest"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>  
+    
+</jxb:bindings>

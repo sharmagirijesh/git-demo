@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI.Test\bin\Debug\MerchantAPI.Test.dll" total="19" failures="0" not-run="0" date="2011-11-16" time="20:35:05">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.5448" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI.Test\bin\Debug" machine-name="RAKESH-PC" user="Rakesh" user-domain="Rakesh-PC" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI.Test\bin\Debug\MerchantAPI.Test.dll" success="True" time="46.801" asserts="0">
+    <results>
+      <test-suite name="MerchantAPI" success="True" time="46.777" asserts="0">
+        <results>
+          <test-suite name="Test" success="True" time="46.760" asserts="0">
+            <results>
+              <test-suite name="ServiceTests" success="True" time="46.726" asserts="0">
+                <results>
+                  <test-case name="MerchantAPI.Test.ServiceTests._00_EchoTest" executed="True" success="True" time="9.211" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._10_CreateUserTest" executed="True" success="True" time="1.378" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._11_CreateUserTest_FailValidation" executed="True" success="True" time="0.046" asserts="0" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._12_CreateUserTest_FailValidationNoIdentity" executed="True" success="True" time="0.045" asserts="0" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._13_CreateOrUpdateUserTest" executed="True" success="True" time="2.018" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._19_GetBeneficiaryBankAccountRequiredData" executed="True" success="True" time="2.270" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._20_ValidateBeneficiaryAccountTest_Failure" executed="True" success="True" time="1.489" asserts="2" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._30_ValidateBeneficiaryAccountTest_Success" executed="True" success="True" time="1.597" asserts="0" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._40_AddBeneficiaryAccountTest" executed="True" success="True" time="1.941" asserts="2" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._50_GetBeneficiaryBankAccountTest" executed="True" success="True" time="2.196" asserts="4" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._55_ListBeneficiaryBankAccountsTest" executed="True" success="True" time="1.516" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._60_GetFXQuoteTest" executed="True" success="True" time="1.889" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._65_GetBalanceTest" executed="True" success="True" time="1.156" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._70_PayoutRequestTest" executed="True" success="True" time="2.963" asserts="2" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._76_GetTransactionDetailTest" executed="True" success="True" time="2.464" asserts="2" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._77_GetStatement" executed="True" success="True" time="4.321" asserts="2" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._78_SearchTransactions" executed="True" success="True" time="2.460" asserts="3" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._80_DeleteBeneficiaryBankAccountTest" executed="True" success="True" time="2.702" asserts="1" />
+                  <test-case name="MerchantAPI.Test.ServiceTests._90_DisableUserTest" executed="True" success="True" time="1.542" asserts="1" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

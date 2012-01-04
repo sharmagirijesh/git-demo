@@ -1,0 +1,15 @@
+D:\My Projects\EPDirect\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\bin\Debug\Earthport.MerchantAPI.dll
+D:\My Projects\EPDirect\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\bin\Debug\Earthport.MerchantAPI.pdb
+D:\My Projects\EPDirect\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\EPDirect\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\Earthport.MerchantAPI.dll
+D:\My Projects\EPDirect\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\bin\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\bin\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\ResolveAssemblyReference.cache
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI\bin\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI\bin\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\ResolveAssemblyReference.cache
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WCFClient_Net3.5\MerchantAPI\obj\Debug\Earthport.MerchantAPI.pdb
