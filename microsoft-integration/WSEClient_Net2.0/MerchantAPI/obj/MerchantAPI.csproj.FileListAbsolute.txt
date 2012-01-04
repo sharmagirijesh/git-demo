@@ -1,0 +1,97 @@
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\ResolveAssemblyReference.cache
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.wsdl.MerchantAPI.wsdl
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\bin\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\bin\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.bankBaseTypes-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.coreTypes-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.financialTransactionBaseTypes-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.identityBaseTypes-1.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.payoutBaseTypes-1.2.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.addBeneficiaryBankAccount-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.addDepositReference-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.createUser-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.deleteBeneficiaryBankAccount-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.disableUser-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.echo-1.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.errorResponse-1.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBalance-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBeneficiaryBankAccount-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBeneficiaryBankAccountRequiredData-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getFXQuote-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getIndicativeFXQuote-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getPayerIdentity-1.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getStatement-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getTransactionDetail-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.listBeneficiaryBankAccounts-3.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.payoutRequest-3.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.searchTransactions-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.updatePayerIdentity-1.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validateBeneficiaryBankAccount-2.0.xsd
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validateCredit-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\bin\Debug\Earthport.MerchantAPI.dll
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\bin\Debug\Earthport.MerchantAPI.pdb
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.bankBaseTypes-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.coreTypes-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.financialTransactionBaseTypes-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.identityBaseTypes-1.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.payoutBaseTypes-1.2.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.addBeneficiaryBankAccount-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.addDepositReference-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.createUser-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.deleteBeneficiaryBankAccount-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.disableUser-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.echo-1.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.errorResponse-1.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBalance-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBeneficiaryBankAccount-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBeneficiaryBankAccountRequiredData-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getFXQuote-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getIndicativeFXQuote-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getPayerIdentity-1.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getStatement-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getTransactionDetail-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.listBeneficiaryBankAccounts-3.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.payoutRequest-3.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.searchTransactions-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.updatePayerIdentity-1.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validateBeneficiaryBankAccount-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validateCredit-2.0.xsd
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.wsdl.MerchantAPI.wsdl
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.dll
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\bin\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\bin\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\ResolveAssemblyReference.cache
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.coreTypes-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.payoutBaseTypes-1.2.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.disableUser-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.echo-1.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.errorResponse-1.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBalance-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getIndicativeFXQuote-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validateCredit-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.wsdl.MerchantAPI.wsdl
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.bankBaseTypes-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.financialTransactionBaseTypes-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.components.identityBaseTypes-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.addBeneficiaryBankAccount-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.createOrUpdateUser-1.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.createUser-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.deleteBeneficiaryBankAccount-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBeneficiaryBankAccount-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getBeneficiaryBankAccountRequiredData-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getFXQuote-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getPayerIdentity-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getStatement-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.getTransactionDetail-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.listBeneficiaryBankAccounts-4.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.payoutRequest-4.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.searchTransactions-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.updatePayerIdentity-2.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validateBeneficiaryBankAccount-3.0.xsd
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\MerchantAPI\obj\Debug\Earthport.MerchantAPI.ServiceMetadata.services.validatePayerIdentity-1.0.xsd

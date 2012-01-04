@@ -1,0 +1,12 @@
+- export from cvs
+- open solution
+- run unit tests
+- remove any code to support internal testing e.g. in wcf client, code that overrides certificate validation
+- ensure url in wsdl is public url
+- ensure url is https
+- remove test project from solution
+- rebuild
+- close solution
+- delete all user files (i.e. *.suo, *.csproj.user)
+- compress folder into zip file
+

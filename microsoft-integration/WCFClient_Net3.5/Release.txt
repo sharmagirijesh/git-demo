@@ -1,0 +1,88 @@
+In  dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\default.build
+At line 3 changed from
+C:/Program Files/NUnit 2.4.8/bin
+to 
+C:/Program Files (x86)/NUnit 2.4.8/bin
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\generate_classes_from_xsd.bat
+At line 1 changed from
+call "C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat"
+to
+call "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat"
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\generate_proxy_from_wsdl.bat
+At line 1 changed from
+call "C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat"
+to
+call "C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\vcvars32.bat"
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+delete all files from 
+dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\components 
+and 
+dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\services
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pasted all new schema files into 
+dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\components 
+and 
+dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\services
+
+Changed all the Build Action property for all the new xsd file to embedded resource
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Changed 
+dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceProxy.cs
+so that proper argument for the new Schema in tha calls of _schemaSet.Add function inside ServiceProxy Constructor
+
+Also
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Generated the dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\MerchantAPIServiceTypesFromXSD.cs incorporating New Schemas using the xsd tool
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Changed the debug property for MerchantAPI.Test project to start in external program with the proper path to nuit.exe and command line argument to MerchantAPI.Test.dll
+ 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI\ServiceMetadata\generate_classes_from_xsd.bat
+At line 2 changed from
+call xsd /c services/addBeneficiaryBankAccount-1.1.xsd services/addDepositReference-1.0.xsd services/createUser-1.1.xsd services/deleteBeneficiaryBankAccount-1.1.xsd services/disableUser-1.1.xsd services/echo-1.0.xsd services/errorResponse-1.0.xsd services/getBalance-1.1.xsd services/getBeneficiaryBankAccount-1.1.xsd services/getBeneficiaryBankAccountRequiredData-1.1.xsd services/getFXQuote-1.1.xsd services/getStatement-1.0.xsd services/getTransactionDetail-1.0.xsd services/listBeneficiaryBankAccounts-2.0.xsd services/payoutRequest-2.0.xsd services/searchTransactions-1.0.xsd services/validateBeneficiaryBankAccount-1.1.xsd services/validateCredit-1.1.xsd components/bankBaseTypes-1.1.xsd components/coreTypes-1.1.xsd components/financialTransactionBaseTypes-1.0.xsd components/payoutBaseTypes-1.0.xsd
+to
+call xsd /c services/addBeneficiaryBankAccount-2.0.xsd services/addDepositReference-2.0.xsd services/createUser-2.0.xsd services/deleteBeneficiaryBankAccount-2.0.xsd services/disableUser-2.0.xsd services/echo-1.0.xsd services/errorResponse-1.0.xsd services/getBalance-2.0.xsd services/getBeneficiaryBankAccount-2.0.xsd services/getBeneficiaryBankAccountRequiredData-2.0.xsd services/getFXQuote-2.0.xsd services/getStatement-2.0.xsd services/getTransactionDetail-2.0.xsd services/listBeneficiaryBankAccounts-3.0.xsd services/payoutRequest-3.0.xsd services/searchTransactions-2.0.xsd services/validateBeneficiaryBankAccount-2.0.xsd services/validateCredit-2.0.xsd components/bankBaseTypes-2.0.xsd components/coreTypes-2.0.xsd components/financialTransactionBaseTypes-2.0.xsd components/identityBaseTypes-1.0.xsd components/payoutBaseTypes-1.2.xsd 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\default.build
+At line 24 and 25 changed from
+<copy  file="MerchantAPI/ServiceMetadata/payoutBaseTypes-1_0.cs" tofile="MerchantAPI/MerchantAPIServiceTypesFromXSD.cs"/>
+<delete file="MerchantAPI/ServiceMetadata/payoutBaseTypes-1_0.cs" failonerror="false"/>
+to
+<copy  file="MerchantAPI/ServiceMetadata/payoutBaseTypes-1_2.cs" tofile="MerchantAPI/MerchantAPIServiceTypesFromXSD.cs"/>
+<delete file="MerchantAPI/ServiceMetadata/payoutBaseTypes-1_2.cs" failonerror="false"/>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\MerchantAPI.Test\ServiceTests.cs
+changed line 363 and 364
+from
+Assert.That(payoutRequestResponse.paymentID > 0);
+_paymentID = payoutRequestResponse.paymentID;
+to 
+Assert.That(payoutRequestResponse.epTransactionID > 0);
+_paymentID = payoutRequestResponse.epTransactionID;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\SampleClient\Program.cs
+changed line 312 from
+Console.WriteLine("\tpaymentID={0}", payoutRequestResponse.paymentID);
+to
+Console.WriteLine("\tpaymentID={0}", payoutRequestResponse.epTransactionID);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\SampleClient\Program.cs
+changed line 335 from
+epTransactionID = payoutRequestResponse.paymentID,
+to
+epTransactionID = payoutRequestResponse.epTransactionID,
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\SampleClient\Program.cs
+changed line 384 from
+epTransactionID = payoutRequestResponse.paymentID,
+to
+epTransactionID = payoutRequestResponse.epTransactionID,
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Deleted dotnet_service_client_18082011\microsoft-integration\WCFClient_Net3.5\WCFClient.suo		

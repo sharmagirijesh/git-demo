@@ -1,0 +1,21 @@
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\ResolveAssemblyReference.cache
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\SampleClient.exe
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\SampleClient.pdb
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\SampleClient.exe
+E:\EP Project Versions\dotnet_service_client_18082011\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\SampleClient.pdb
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\SampleClient.exe
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\SampleClient.pdb
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\Earthport.MerchantAPI.dll
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\Earthport.MerchantAPI.pdb
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\SampleClient.exe
+C:\Users\Rakesh\Desktop\dotnet_client_reference09262011_Latest - Copy\dotnet_client_reference09262011\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\SampleClient.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\SampleClient.exe
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\SampleClient.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\Earthport.MerchantAPI.dll
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\bin\Debug\Earthport.MerchantAPI.pdb
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\ResolveAssemblyReference.cache
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\SampleClient.exe
+E:\EP Project Versions\Dotnet Client\microsoft-integration\WSEClient_Net2.0\SampleClient\obj\Debug\SampleClient.pdb
