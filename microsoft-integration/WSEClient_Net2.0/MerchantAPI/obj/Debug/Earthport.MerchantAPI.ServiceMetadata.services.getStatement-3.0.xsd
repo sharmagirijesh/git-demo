@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Document: getStatement-3.0.xsd
+	Version:  3.0
+	Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema
+	targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v3/services/getStatement"
+	elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:epftb="http://customer.endpoint.earthport.com/api/merchant/v3/components/financialTransactionBase"
+	xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+	xmlns="http://customer.endpoint.earthport.com/api/merchant/v3/services/getStatement" >
+
+	<xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v3/components/financialTransactionBase" 
+		schemaLocation="../components/financialTransactionBaseTypes-3.0.xsd" />
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+	
+	<xsd:annotation>
+		<xsd:documentation>
+			Retrieves a list of financial transactions and balances for a specified time period for an account administered in the EPS system. 
+			
+			To retrieve a particular statement the startDate, endDateTime and currency of the account must be specified on top of 
+			the usual merchant identity information. 
+			
+			The statement returned will contain transactions that occurred since the start of the startDate up to and including endDateTime. 
+			If the account (in the requested currency) does not contain any transactions for the period an empty statement is returned.
+			
+			Every transaction, together with the money movement it represents (debit or credit) and it's resulting account balance are represented as a statement line item.
+			There will be a number of statement line items (up to the maximum page size) per page with an opening and closing balance for that page.
+			
+			Currently the following transaction types may show up on a statement:
+				
+				Payout transaction
+				Refund transaction
+				User deposit
+				Liquidity deposit
+				Journal transaction
+				Merchant liquidity movement
+				
+			The operation supports sorting (by date) by specifying a sort order (ASC or DESC) and paging across multiple pages of results. 
+			(See definition of PaginationType for details of pagination parameters.)
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="getStatement" type="GetStatementType"></xsd:element>
+
+	<xsd:element name="getStatementResponse"
+		type="GetStatementResponseType">
+	</xsd:element>
+
+	<xsd:complexType name="GetStatementResponseType">
+		<xsd:sequence>
+			<xsd:element name="statementLineItemsList"
+				type="StatementLineItemsListType" minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="paginationResult"
+				type="epcore:PaginationResultType" minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="openingBalance"
+				type="epcore:MonetaryBalanceType" minOccurs="1" maxOccurs="1">
+			</xsd:element>
+			<xsd:element name="closingBalance" 
+				type="epcore:MonetaryBalanceType" minOccurs="1" maxOccurs="1">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="GetStatementType">
+		<xsd:sequence>
+            <xsd:element name="managedMerchantIdentity" type="epcore:MerchantIdentityType" 
+            	minOccurs="0" maxOccurs="1">
+            	<xsd:annotation>
+            		<xsd:documentation>
+						Managed merchant whose transactions will be returned  when being called by
+						the contracting merchant
+					</xsd:documentation>
+				</xsd:annotation>
+            </xsd:element>
+            <xsd:element name="startDateTime" type="epcore:GenericTimestampType"
+				minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						The start day of the statement period. All
+						transactions from the start of the day are
+						included.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="endDateTime"
+				type="epcore:GenericTimestampType" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						The end day timestamp of the statement period.
+						(If this is now or null the statement will
+						include all transactions up to the current point
+						in time)
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+
+			<xsd:element name="currency" type="epcore:CurrencyCodeType"
+				minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						The currency code representing currency of the
+						user or merchant account.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="sortOrder" type="epcore:SortOrderType"
+				minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						Sort by transaction date in either Ascending
+						orDescending order
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="pagination" type="epcore:PaginationType"
+				minOccurs="0" maxOccurs="1">
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />
+		
+	</xsd:complexType>
+
+	<xsd:complexType name="StatementLineItemsListType">
+		<xsd:annotation>
+			<xsd:documentation>
+				List of 0 or more statement line item objects matching
+				the request parameters. Each statement line item
+				represents a financial transaction and an account
+				balance resulting from the transaction.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="statementLineItem"
+				type="StatementLineItemType" minOccurs="0" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="StatementLineItemType">
+		<xsd:annotation>
+			<xsd:documentation>
+				A statement line item is a financial transaction that
+				affects the balance of an account.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="transaction"
+				type="epftb:FinancialTransactionType">
+			</xsd:element>
+
+            <xsd:element name="balance" type="epcore:GenericAmountType">
+			</xsd:element>
+        </xsd:sequence>
+	</xsd:complexType>
+	
+</xsd:schema>
+

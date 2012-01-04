@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document: updatePayerIdentity-2.0.xsd	
+    Version:  2.0
+    Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema xmlns="http://customer.endpoint.earthport.com/api/merchant/v2/services/updatePayerIdentity"
+    targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v2/services/updatePayerIdentity"
+    xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+    xmlns:epident="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase" 
+    	schemaLocation="../components/identityBaseTypes-2.0.xsd" />
+    	
+    <xsd:annotation>
+        <xsd:documentation>
+		
+            This service is used to update an existing payer identity within the Earthport platform. 
+			
+			It can also be used to create a new identity where the user has previously been created but without any Payer Identity information.
+			
+			The Payer Identity will be associated with the user passed in the request.
+			
+			If this service is used and a different PayerIdentity is provided, the existing PayerIdentity will be replaced.
+			If this service is used and the same PayerIdentity is provided, the original PayerIdentity will be retained.
+			
+        </xsd:documentation>
+    </xsd:annotation>
+    
+    <xsd:element name="updatePayerIdentity" type="UpdatePayerIdentityType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Root element for the updatePayerIdentity service request XML.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	
+	<xsd:element name="updatePayerIdentityResponse" type="UpdatePayerIdentityResponseType">
+	 <xsd:annotation>
+            <xsd:documentation>
+                Root element for the updatePayerIdentity service response XML.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+	
+	<xsd:complexType name="UpdatePayerIdentityType">
+        <xsd:annotation>
+            <xsd:documentation>
+				
+				Input parameters which are required by the "updatePayerIdentity" service:
+				
+				The "userID" - Mandatory - (Please refer to the "userIDType" element of the coreTypes.xsd file)
+						The userID can either be an "epUserID" or a "merchantUserID" or both.
+						At least one element must be provided.
+						This is the user to which the bank account will be added.
+															
+				The "payerIdentity" - Mandatory - (Please refer to the "PayerIdentityType" element in the identityBaseTypes.xsd file)
+								This defines the identity of a user, be they either an individual or a legal entity.
+				
+				
+												
+			</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+			<xsd:element name="userID" type="epcore:UserIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="payerIdentity" type="epident:PayerIdentityType" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />
+	</xsd:complexType>
+    
+
+    
+     <xsd:complexType name="UpdatePayerIdentityResponseType">
+	  <xsd:annotation>
+            <xsd:documentation>
+			
+			There are no parameters returned by the "updatePayerIdentity" service response.		
+			
+				The Single Object Access Protocol(SOAP) type which defines the response will be empty since this service has no return value. 
+				Instead the response makes use of the top-level SOAP "ack" element to indicate success or failure.
+			
+				The top-level SOAP response will have an "ack" element response of 'success' if the payer identity is deemed valid.
+				The top-level SOAP response will have an "ack" element response of 'failed' if the payer identity is deemed invalid.
+				The response will contain the element "isPayerIdentityValid" which is a boolean (Yes / No) response confirming the validity status.
+				
+				NOTE: If the ack response is 'failed' the top-level SOAP response will contain an error response XML document containing one or more validation failures. 
+				(Please refer to the "errorResponse.xsd" file for details on the structure of this XML fragment). 
+			
+            </xsd:documentation>
+        </xsd:annotation>
+	 
+	 </xsd:complexType>
+	
+</xsd:schema>

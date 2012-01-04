@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document: createUser-3.0.xsd	
+    Version:  3.0
+    Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema xmlns="http://customer.endpoint.earthport.com/api/merchant/v3/services/createUser"
+    targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v3/services/createUser"
+    xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+    xmlns:epident="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase" 
+    	schemaLocation="../components/identityBaseTypes-2.0.xsd" />
+
+    <xsd:annotation>
+        <xsd:documentation>
+		
+				This service is used to create a new virtual account.
+				
+				If there is already an account in the system with the same value of "merchantUserIdentity" the system will return a validation exception.
+				
+								
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="createUser" type="CreateUserType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Root element for the createUser service request XML.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:element name="createUserResponse"
+        type="CreateUserResponseType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Root element for the createUser service response XML.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:complexType name="CreateUserType">
+        <xsd:annotation>
+            <xsd:documentation>
+			
+				Input parameters which are required by the "createUser" service:
+				
+				The "merchantUserIdentity - Mandatory - (Please refer to the "MerchantUserIdentityType" element of the coreTypes.xsd file)
+									This is a unique reference for the merchant (user) which is used to identify the person or company on behalf 
+									of which the account was set-up. This is required to reference "Know Your Customer" data held by the merchant 
+									(amongst other things). This is often a unique username or reference allocated by the merchant (user) during 
+									user registration. 
+									
+									This field is used to determine if an ID already exists or if a new ID can be created.
+						
+				The "accountCurrency" - Mandatory - (Please refer to the "CurrencyCodeType" element of the coreTypes.xsd file)
+									This is the currency in which collections from this user will be credited to the merchant.
+									To be credited in the currency the user deposited specify 'any'.
+									This value does not affect the payout process in any way.
+									Once established for an ID, this element cannot be changed. A new ID will need to be created.
+						
+				The "managedMerchantIdentity" - Optional - (Please refer to the "MerchantIdentityType" element of the coreTypes.xsd file)
+									The "managedMerchantIdentity" is only applicable when connecting as a contracting merchant and
+									only applies in those circumstances where the hierarchy for the client includes Managed Merchants 
+									(e.g. branches or companies that operate independently with separate budgets).
+									If the user that is being created should belong to a Managed Merchant instead of the Contracting Merchant 
+									(i.e. top level of the hierarchy) then the managed merchant name must be specified in this parameter.
+						
+				The "payerIdentity" - Optional - (Please refer to the "PayerIdentityType" element of the identityBaseTypes.xsd file)
+									This defines the identity of a user, be they either an individual or a legal entity.
+									This detail, if supplied, must include either the "payerIndividualIdentity" or "payerLegalEntityIdentity"; never both.
+									
+									Note that a payout request with payerType = user will fail unless the user has some payerIdentity defined.
+
+						
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="merchantUserIdentity" type="epcore:MerchantUserIdentityType" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="accountCurrency" type="epcore:CurrencyCodeType" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="managedMerchantIdentity" type="epcore:MerchantIdentityType" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="payerIdentity" type="epident:PayerIdentityType" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+        <xsd:attribute name="version" type="xsd:decimal" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="CreateUserResponseType">
+        <xsd:annotation>
+            <xsd:documentation>
+			
+              Parameters which are returned by the "createUser" service response:
+			
+				The "userID" - Mandatory - (Please refer to the "userIDType" element of the coreTypes.xsd file)
+						The userID can either be an "epUserID" or a "merchantUserID" or both.
+						At least one element must be provided.
+						This is the user to which the bank account will be added..
+			
+				An unsuccessful request returns an "errorResponse" depending on the reason for the error or failure.
+				
+				Example errors when trying to create an account using the "createUser" service include:
+						"MerchantUserId" already exists
+						Currency provided in the "accountCurrency" is either invalid or not supported.
+						Payer Identity information (if supplied) is not correct (as per the identityBaseTypes.xsd file)
+						Managed Merchant (if supplied) is not correct because there is no matching managed merchant for this contracting merchant
+						(Please refer to the errorResponse.xsd file for details on the structure of this XML element).
+						
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="userID" type="epcore:UserIDType" 
+            	minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

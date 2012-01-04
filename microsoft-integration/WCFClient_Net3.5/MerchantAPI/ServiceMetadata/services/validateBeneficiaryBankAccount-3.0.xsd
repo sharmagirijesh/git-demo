@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Document: validateBeneficiaryBankAccount-3.0.xsd
+	Version:  3.0
+	Copyright 2008 Earthport Plc. All rights reserved.
+-->
+<xsd:schema
+	xmlns="http://customer.endpoint.earthport.com/api/merchant/v3/services/validateBeneficiaryBankAccount"
+	targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v3/services/validateBeneficiaryBankAccount"
+	xmlns:epbb="http://customer.endpoint.earthport.com/api/merchant/v3/components/bankBase"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	
+   	<xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v3/components/bankBase" 
+   		schemaLocation="../components/bankBaseTypes-3.0.xsd" />
+	
+	<xsd:annotation>
+		<xsd:documentation>
+
+			<p>validateBeneficiaryBankAccount request</p>
+
+			<p>
+				Definition of XML document message for the
+				validateBeneficiaryBankAccount request function. This
+				function is used by customers to determine whether a
+				beneficiary bank account is deemed valid.
+			</p>
+
+			<p>
+				The message must contain a beneficiary bank account.
+				See the definition of the complex type
+				'BeneficiaryBankAccountType' for details on how to
+				construct the beneficiary bank account.
+			</p>
+
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="validateBeneficiaryBankAccount"
+		type="ValidateBeneficiaryBankAccountType" />
+
+	<xsd:complexType name="ValidateBeneficiaryBankAccountType">
+		<xsd:sequence>
+			<xsd:element name="beneficiaryBankAccount"
+				type="epbb:BeneficiaryBankAccountType" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />
+	</xsd:complexType>
+
+
+	<xsd:annotation>
+		<xsd:documentation>
+
+			<p>validateBeneficiaryBankAccount response</p>
+
+			<p>
+				Definition of XML document message returned by the
+				validateBeneficiaryBankAccount function.
+			</p>
+
+			<p>
+				The SOAP type which defines the response is empty since
+				this function has no return value. Instead it makes use
+				of the top-level SOAP ack element to indicate success or
+				failure.
+			</p>
+
+			<p>
+				The top-level SOAP response will have an ack element
+				response of 'success' if the bank account is deemed
+				valid, or 'failed' otherwise.
+				
+				The response will contain the element 'isBankAccountValid'
+				which is a boolean representing if the specified 
+				beneficiary bank account is valid.
+			</p>
+
+			<p>
+				If the ack response is 'failed' the top-level SOAP
+				response will contain an error response XML document
+				containing one or more validation failures. Refer to the
+				documentation of the 'ErrorResponse' complexType for
+				details on the structure of this XML fragment. 
+			</p>
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="validateBeneficiaryBankAccountResponse"
+		type="ValidateBeneficiaryBankAccountResponseType" />
+
+	<xsd:complexType name="ValidateBeneficiaryBankAccountResponseType" >
+		<xsd:all>
+			<xsd:element name="isBankAccountValid"
+				type="xsd:boolean" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+</xsd:schema>

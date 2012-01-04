@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Document: getBeneficiaryBankAccount-3.0.xsd
+	Version:  3.0
+	Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema 
+	xmlns="http://customer.endpoint.earthport.com/api/merchant/v3/services/getBeneficiaryBankAccount" 
+	targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v3/services/getBeneficiaryBankAccount" 
+	xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+	xmlns:epbb="http://customer.endpoint.earthport.com/api/merchant/v3/components/bankBase"
+	xmlns:epident="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" >
+
+   	<xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v3/components/bankBase" 
+   		schemaLocation="../components/bankBaseTypes-3.0.xsd" />
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase" 
+    	schemaLocation="../components/identityBaseTypes-2.0.xsd" />
+	
+	<xsd:annotation>
+		<xsd:documentation>
+
+			<p>getBeneficiaryBankAccount request</p>
+
+			<p>
+				Definition of XML document message for the
+				getBeneficiaryBankAccount request function. This
+				function is used by customers to list all of the details for
+				the specified beneficiary bank account.
+			</p>
+			
+			<p>
+				The message needs to contain a mandatory user bank ID which contains
+				the 'userID' token and a 'benBankID' token representing the 
+				beneficiary	bank account to get.
+			</p>
+			
+		</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:element name="getBeneficiaryBankAccount"
+		type="getBeneficiaryBankAccountType" />
+
+	<xsd:complexType name="getBeneficiaryBankAccountType">
+		<xsd:sequence>
+			<xsd:element name="usersBankID"
+				type="epbb:UsersBankIDType" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />
+	</xsd:complexType>
+	
+	<xsd:annotation>
+		<xsd:documentation>
+
+			<p>getBeneficiaryBankAccountResponse response</p>
+
+			<p>
+				Definition of XML document message returned by the
+				getBeneficiaryBankAccount function.
+			</p>
+
+			<p>
+				Following a successful service call, the response
+				contains the bank account description, countryCode, currencyCode, 
+				whether the account is active and a number of beneficiaryBankAccountFieldGroup elements.
+				
+				A beneficiary bank account which has isActive=false means the deleteBeneficiaryBankAccount has 
+				previously been called against this account.
+
+				<b>beneficiaryBankAccountFieldGroup</b>
+				<br/>
+				Each beneficiaryBankAccountFieldGroup describes one logical
+				grouping of bank account data. Each beneficiaryBankAccountFieldGroup
+				would normally be displayed in the UI on a separate horizontal row.
+				
+				It contains the attributes
+				
+				<ul>
+					<li>groupLabel: the suggested UI label for the group</li>
+					<li>mandatory: if true indicates that it is mandatory for data to be entered in the input fields</li>
+				</ul>
+				
+				<br/>
+				and is composed of one or more beneficiaryBankAccountField elements.
+				
+				<br/>
+				<b>beneficiaryBankAccountField</b>
+				<br/>
+				
+				Each beneficiaryBankAccountField would normally be displayed 
+				in the UI from left to right based on the tabOrder attribute.
+				<br/>
+				The beneficiaryBankAccountField element contains
+				the following attributes:
+				
+				<ul>
+					<li>tabOrder: indicates the ordering of this field in the UI</li>
+					<li>parameterName: the name of the corresponding Earthport parameter to use when calling addBeneficiaryBankAcount</li>
+					<li>displaySize: a suggested field size to display</li>
+					<li>maxSize: suggested client side syntactic validation rule</li>
+					<li>description: suggested roll-over or help text description to assist users</li>
+					<li>separator: the separator to display following (to the right hand side) this field, usually '-' or '/'</li>
+					<li>inputType: whether this field should be represented as a text field or a list of options</li>
+					<li>subTitle: if present contains a sub-label to be displayed with the field</li>
+					<li>locale: the localisation setting of this particular record</li>
+				</ul>
+				
+				<br/>
+				The beneficiaryBankAccountField contains optional listItem sub-elements.
+				The listItem sub-elements would normally be present where the inputType 
+				attribute is <i>'list'</i>. 
+				<br/>
+				
+				<b>listItem</b>
+				<br/>
+				The listItem element contains the attributes
+				<ul>
+					<li>label: the name of the option in the list</li>
+					<li>value: the value of the corresponding paramaterName if the list item is selected</li>
+				</ul>
+				
+				<p>
+				Once values have been supplied for every one of the beneficiaryBankAccountField
+				elements, there is now sufficient data to fully populate the bankAccountDetails
+				portion of the beneficiaryBankAccount element as required by the
+				addBeneficiaryBankAccount service.
+				</p>
+			</p>
+
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="getBeneficiaryBankAccountResponse" type="getBeneficiaryBankAccountResponseType" />
+	
+	<xsd:complexType name="getBeneficiaryBankAccountResponseType">
+    	<xsd:sequence minOccurs="1" maxOccurs="1">
+			<xsd:element name="usersBankID" type="epbb:UsersBankIDType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="beneficiaryIdentity"	type="epident:BeneficiaryIdentityType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="description" type="epbb:BeneficiaryBankAccountDescType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="countryCode" type="epcore:CountryCodeType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="currencyCode" type="epcore:CurrencyCodeType" minOccurs="1" maxOccurs="1" />	
+			<xsd:element name="isActive" type="xsd:boolean" minOccurs="1" maxOccurs="1" />		
+      		<xsd:element name="beneficiaryBankAccountFieldGroupsList" type="epbb:BeneficiaryBankAccountGroupsListType" />
+    	</xsd:sequence>	
+  	</xsd:complexType>
+
+</xsd:schema>

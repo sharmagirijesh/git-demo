@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document: validatePayerIdentity-1.0.xsd	
+    Version:  1.0
+    Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema xmlns="http://customer.endpoint.earthport.com/api/merchant/v1/services/validatePayerIdentity"
+    targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v1/services/validatePayerIdentity"
+    xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+    xmlns:epident="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+    	schemaLocation="../components/coreTypes-2.0.xsd" />
+    
+    <xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/identityBase" 
+    	schemaLocation="../components/identityBaseTypes-2.0.xsd" />
+
+    <xsd:annotation>
+        <xsd:documentation>
+		
+            This service is used to check that payerIdentity details are valid for a specific beneficiary country. 
+			
+			This service is needed because a payment corridor/territory can have specific requirements in terms of what payer identity data needs
+			to be supplied. 
+			A merchant may need to know in real time when the recipient is collecting funds, if they have sufficient payer
+			identity information.
+			
+			Please refer to the Earthport Payment Guide for guidelines of territory specific payer identity requirements.
+			
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="validatePayerIdentity" type="ValidatePayerIdentityType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Root element for the validatePayerIdentity service request XML.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:element name="validatePayerIdentityResponse"
+        type="ValidatePayerIdentityResponseType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Root element for the validatePayerIdentity service response XML.
+            </xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+    <xsd:complexType name="ValidatePayerIdentityType">
+        <xsd:annotation>
+            <xsd:documentation>
+			
+                Input parameters which are required by the "ValidatePayerIdentity" service:
+					
+					The "payerIdentity" - Mandatory - (Please refer to the "PayerIdentityType" element of the identityBaseTypes.xsd file)
+								This defines the identity of the user to be validated, be they either an individual or a legal entity.
+								This detail must include either the "payerIndividualIdentity" or "payerLegalEntityIdentity"; never both
+					
+					The	"beneficiaryCountryCode" - Mandatory - (Please refer to the "CountryCodeType" element of the coreTypes.xsd file)
+								The destination country to check the payer identity is valid for.
+												
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="payerIdentity" type="epident:PayerIdentityType" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="beneficiaryCountryCode" type="epcore:CountryCodeType" minOccurs="1" maxOccurs="1" />
+        </xsd:sequence>
+        <xsd:attribute name="version" type="xsd:decimal" use="required" />
+    </xsd:complexType>
+
+	
+
+	<xsd:complexType name="ValidatePayerIdentityResponseType" >
+	
+	<xsd:annotation>
+		<xsd:documentation>
+		
+			
+			Parameters which are returned by the "validatePayerIdentity" service response:
+			
+				The "isPayerIdentityValid" - Mandatory 
+				Boolean indicator of the validity of the payer identity and destination country provided in the request message.
+			
+		</xsd:documentation>
+	</xsd:annotation>
+	
+		<xsd:all>
+			<xsd:element name="isPayerIdentityValid"
+				type="xsd:boolean" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Document: getTransactionDetail-3.0.xsd
+	Version:  3.0
+	Copyright 2009 Earthport Plc. All rights reserved.
+-->
+<xsd:schema
+	targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v3/services/getTransactionDetail"
+	elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:epftb="http://customer.endpoint.earthport.com/api/merchant/v3/components/financialTransactionBase"
+	xmlns:epcore="http://customer.endpoint.earthport.com/api/merchant/v2/components/core"
+	xmlns="http://customer.endpoint.earthport.com/api/merchant/v3/services/getTransactionDetail" >
+
+	<xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v3/components/financialTransactionBase" 
+		schemaLocation="../components/financialTransactionBaseTypes-3.0.xsd" />
+		
+	<xsd:import namespace="http://customer.endpoint.earthport.com/api/merchant/v2/components/core" 
+		schemaLocation="../components/coreTypes-2.0.xsd" />
+
+	<xsd:annotation>
+		<xsd:documentation>
+			This schema defines request and response XML document messages for the getTransactionDetail operation. 
+		
+			The getTransactionDetail operation retrieves details of a financial transaction(s) against a merchant's account based
+			on a financial transaction ID(s).
+			
+			The following financial transaction types are supported:
+				
+				Payout transaction
+				Refund transaction
+				User deposit
+				Liquidity deposit
+				Journal transaction
+				Merchant liquidity movement
+				
+			The service supports the retrieval of several transaction detail records at a time. To achieve this a list of 
+			transaction IDs should be passed in the request. The response will contain a list of each of those IDs mapped 
+			to the corresponding transaction detail record.
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="getTransactionDetail"
+		type="GetTransactionDetailType">
+	</xsd:element>
+
+	<xsd:element name="getTransactionDetailResponse"
+		type="GetTransactionDetailResponseType">
+	</xsd:element>
+
+	<xsd:complexType name="GetTransactionDetailType">
+		<xsd:sequence>
+            <xsd:element name="managedMerchantIdentity" type="epcore:MerchantIdentityType" 
+            	minOccurs="0" maxOccurs="1">
+            	<xsd:annotation>
+            		<xsd:documentation>
+						Managed merchant whose transactions will be returned  when being called by
+						the contracting merchant
+					</xsd:documentation>
+				</xsd:annotation>
+            </xsd:element>		
+			<xsd:element name="transactionID" type="TransactionIDType"
+				minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						One or more EPS and/or Merchant transaction IDs uniquely identifying 
+						transactions in the EPS system.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="version" type="xsd:decimal" use="required" />		
+	</xsd:complexType>
+
+	<xsd:complexType name="GetTransactionDetailResponseType">
+		<xsd:sequence>
+			<xsd:element name="transactionDetailMappings" type="TransactionDetailMappingListType" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>List of transaction details.
+Each transaction returned contains a mandatory transaction ID cross-referencing the requested EPS transaction ID.</xsd:documentation>
+				</xsd:annotation></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TransactionDetailMappingType">
+		<xsd:sequence>
+			<xsd:element name="transactionID" type="TransactionIDType"
+				minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						One or more EPS and/or Merchant transaction IDs uniquely identifying 
+						transactions in the EPS system.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="transactionDetail" type="epftb:FinancialTransactionType" minOccurs="1" maxOccurs="1"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TransactionDetailMappingListType">
+		<xsd:sequence>
+			<xsd:element name="transactionDetailMapping" type="TransactionDetailMappingType" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="TransactionIDType">
+        <xsd:annotation>
+        	<xsd:documentation>
+				An EPS and/or Merchant transaction ID that uniquely identifies
+				a transaction in the EPS system
+        	</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+			<xsd:element name="epTransactionID" type="epcore:PaymentIDType"
+				minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						An EPS transaction ID uniquely identifying 
+						a transaction in the EPS system.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="merchantTransactionID" type="epcore:MerchantTransactionRefType" 
+				minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						A transaction ID (as assigned
+						by the merchant) that (together with a
+						Customer ID) can be used to uniquely
+						identify a transaction in the EPS
+						system.
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+        </xsd:sequence>
+	</xsd:complexType>	
+</xsd:schema>

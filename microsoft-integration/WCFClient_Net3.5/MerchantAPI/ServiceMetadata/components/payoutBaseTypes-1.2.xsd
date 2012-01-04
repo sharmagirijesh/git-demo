@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document: payoutBaseTypes-1.2.xsd
+    Version:  1.2
+    Copyright 2008 Earthport Plc. All rights reserved.
+-->
+<xsd:schema xmlns="http://customer.endpoint.earthport.com/api/merchant/v1/components/payoutBase"
+    targetNamespace="http://customer.endpoint.earthport.com/api/merchant/v1/components/payoutBase"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+
+    <xsd:annotation>
+        <xsd:documentation>
+            Description: Payout context base type definitions used by the
+            Earthport UPN Merchant API.
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:simpleType name="ServiceLevelType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Supported service levels for a payout request.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="standard" />
+            <xsd:enumeration value="express" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="FXMethodType">
+        <xsd:annotation>
+            <xsd:documentation>
+                Method of FX that will be used to settle the payout request.
+            </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="no fx" />
+            <xsd:enumeration value="forward fx" />
+            <xsd:enumeration value="fx on receipt" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="PayerType">
+    	<xsd:annotation>
+            <xsd:documentation>
+                The type of Payer making the payment
+                authenticatedCaller - Payout is being requested on behalf of the requesting merchant
+                managedMerchant - Payout is being requested on behalf of a managed merchant
+                user - Payout is being requested on behalf of a user
+            </xsd:documentation>
+        </xsd:annotation>
+  		<xsd:restriction base="xsd:string">
+    		<xsd:enumeration value="authenticatedCaller"/>
+    		<xsd:enumeration value="managedMerchant"/>
+    		<xsd:enumeration value="user"/>
+  		</xsd:restriction>
+	</xsd:simpleType>
+    
+    <xsd:complexType name="PayoutDetailsType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<p>
+				This is reserved for future use, but will be used to 
+				allow additional data to be supplied with a payout.
+				
+				Valid keys will be defined at a later date
+				</p>
+				
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="key" type="PayoutDetailsKeyType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="value" type="PayoutDetailsValueType" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+        
+    <xsd:simpleType name="PayoutDetailsKeyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Type which defines the allowable data which may be
+				passed to the "key" element of the PayoutDetailsType
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1" />
+			<xsd:maxLength value="50" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="PayoutDetailsValueType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Type which defines the allowable data which may be
+				passed to the "value" element of the PayoutDetailsType
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1" />
+			<xsd:maxLength value="100" />
+		</xsd:restriction>
+	</xsd:simpleType> 
+
+	<xsd:simpleType name="PayoutType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Reserved for future use.
+				Will be used to state the Payout type
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1" />
+			<xsd:maxLength value="100" />
+		</xsd:restriction>
+	</xsd:simpleType>    
+</xsd:schema>
